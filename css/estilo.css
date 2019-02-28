@@ -1,0 +1,25 @@
+/*Reglas
+	Selectores
+	Declaraciones	
+	Propiedades
+	Valores*/
+
+body/*Selector de etiquta*/
+{
+	background: red !important;
+}
+
+/*Selector descendente
+body header div nav ol li a
+{
+
+}*/
+
+/*Selector de clase
+.link
+{}*/
+
+/*Selector de id
+#portafolio 
+{
+}*/

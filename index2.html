@@ -10,57 +10,61 @@
 				background: green;
 			}
 		</style><!-- Estilos internos -->
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	</head>
 	<body>
 
-		<header style="color:red; background: blue;"><!--Estilos en linea -->
-			<figure>
+		<header style="color:red; background: blue;" class="header"><!--Estilos en linea -->
+			<figure  class="logo">
 				<img src="img/logo.png" alt="Logo de yeisonfuentes.com">
 			</figure>
-			<nav>
+			<nav class="menu">
 				<ol>
-					<li><a href="#portafolio" title="">Portafolio</a></li>
-					<li><a href="#experiencia" title="">Experiencia</a></li>
-					<li><a href="#trabajemos" title="">Trabajemos Juntos</a></li>
+					<li><a class="link" href="#portafolio" title="">Portafolio</a></li>
+					<li><a class="link" href="#experiencia" title="">Experiencia</a></li>
+					<li><a class="link" href="#trabajemos" title="">Trabajemos Juntos</a></li>
 				</ol>
 			</nav>
 		</header>
 
-		<section>
+		<section class="hero">
 			<h1>Hola! Soy <strong>Yeison Fuentes</strong><br><strong>Desarrollador Web</strong> y <br>estudiante de <strong>Ingeniería Informática</strong></h1>
 		</section>
 		<img src="img/hero.jpg" alt="Imagen principal del sitio" width="500" height="300"> Imagen seccion Principal
 
-		<section id="portafolio">
+		<section id="portafolio"	class="portfolio">
 			<h2>Proyectos destacados</h2>
-			<article>
-				<h3>Platzi Video</h3>
-				<h6>React Native / React</h6>
-				<p><small><strong>Fecha:</strong> 01/07/2018</small></p>
-				<p><small><strong>Puedes verlo en:</strong> www.platzi.com/native</small></p>
-				<p>
+			<article class="project">
+				<h3 class="project-title">Platzi Video</h3>
+				<h6 class="project-course">React Native / React</h6>
+				<p class="project-date"><small><strong>Fecha:</strong> 01/07/2018</small></p>
+				<p class="project-url"><small><strong>Puedes verlo en:</strong> www.platzi.com/native</small></p>
+				<p class="project-description">
 						Platzi Video fue el resultado de 3 meses de trabajo para crear la mejor app para enseñar el funcionamiento de React y React Native. Desde crear un vista-detalle,hasta patrones avanzados de navegación, este proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma.
 				</p>
-				<img src="img/platzi-video-react-native.png" alt="Proyecto del curso de react native" width="500">
+				<figure class="project-imageContainer">
+					<img class="project-image" src="img/platzi-video-react-native.png" alt="Proyecto del curso de react native" width="500">					
+				</figure>
+				
 			</article>
 		</section>
 		
 		<section id="experiencia">
 			<h2>Mas sobre mi experiencia</h2>
-			<article>
-				<figure>
-					<img src="img/platzi-conf.jpg" alt="" width="500">					
+			<article class="event">
+				<figure class="event-imageContainer">
+					<img class="event-image" src="img/platzi-conf.jpg" alt="" width="500">					
 				</figure>
-				<h3>Platzi conf Mexico 2018</h3>
-				<p>
+				<h3 class="event-title">Platzi conf Mexico 2018</h3>
+				<p class="event-description">
 					El evento más grande sobre gente que quiere aprender más de internet. En este evento te comparto cómo tener una vida de constante aprendizaje.
 				</p>
-				<a href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank" title="">Ver Plática</a>
+				<a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank" title="">Ver Plática</a>
 
 			</article>
 		</section>
-		<section id="trabajemos">
-			<form action="" method="" accept-charset="utf-8">
+		<section id="trabajemos" class="contact">
+			<form class="form-email" action="" method="" accept-charset="utf-8">
 				<h2>¿Creamos algo Juntos?</h2>
 				<input type="text" name="" placeholder="Déjame tu Email" ">
 				<button value="">Enviar</button>
@@ -68,7 +72,7 @@
 
 		</section>
 
-		<footer>footer</footer>
+		<footer class="footer">footer</footer>
 	
 	</body>
 </html>
