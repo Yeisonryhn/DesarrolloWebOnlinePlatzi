@@ -1,8 +1,10 @@
 body
 {
 	font-family: 'Source Sans Pro', sans-serif;
+	margin: 0;
 	/*background: red;*/
 }
+
 
 h1,h2,h3,h4,h5,h5
 {
@@ -20,6 +22,7 @@ h1
 	text-transform: uppercase;
 	/*text-decoration: underline;Subrayado*/
 	color: white;
+	margin: 0px;
 }
 
 h1 strong
@@ -38,15 +41,9 @@ h1 strong
 	margin-top: 0px;
 	
 }
-
-.project-details
+.portfolio
 {
-	width: 500px;
-}
-
-.project-imageContainer
-{
-	width: 500px;
+	background-color: #fafafa;
 }
 
 .header
@@ -61,6 +58,35 @@ h1 strong
 	color: white;
 	text-decoration: none;
 }
+
+.project
+{
+	/*border-top: 10px solid red;
+	border-right: 10px solid green;
+	border-left: 10px solid pink;
+	border-bottom: 10px solid orange;*/
+	/*border-color: red;
+	border-width: 15px;
+	border-style: solid;*/
+	border: 1px solid gray;
+	border-radius: 10px;
+	/*border-top-left-radius: 50px;*/
+	margin: 10px;
+	margin-bottom:15px;
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0px 0px 20px #000;
+}
+.project-details
+{
+	width: 500px;
+}
+
+.project-imageContainer
+{
+	width: 500px;
+}
+
 
 
 /*
