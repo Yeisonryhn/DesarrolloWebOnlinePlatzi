@@ -4,17 +4,18 @@
 		<title>Portafolio Yeison Fuentes</title>
 		<link rel="icon" type="image.png" href="img/favicon.png">
 		<meta charset="utf-8">
-		<style type="text/css" media="screen">
+		<!--<style type="text/css" media="screen">
 			header
 			{
 				background: green;
 			}
-		</style><!-- Estilos internos -->
+		</style> Estilos internos -->
 		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro:600" rel="stylesheet">
 	</head>
 	<body>
 
-		<header style="color:red; background: blue;" class="header"><!--Estilos en linea -->
+		<header class="header"><!--Estilos en linea -->
 			<figure  class="logo">
 				<img src="img/logo.png" alt="Logo de yeisonfuentes.com">
 			</figure>
@@ -28,20 +29,23 @@
 		</header>
 
 		<section class="hero">
-			<h1>Hola! Soy <strong>Yeison Fuentes</strong><br><strong>Desarrollador Web</strong> y <br>estudiante de <strong>Ingeniería Informática</strong></h1>
+			<h1>Hola! Soy <strong>Yeison Fuentes</strong><br><strong>Desarrollador Web</strong> y estudiante <br>de <strong>Ingeniería Informática</strong></h1>
+			<!-- <img src="img/hero.jpg" alt="Imagen principal del sitio" width="500" height="300"> Imagen seccion Principal -->
 		</section>
-		<img src="img/hero.jpg" alt="Imagen principal del sitio" width="500" height="300"> Imagen seccion Principal
+		
 
 		<section id="portafolio"	class="portfolio">
 			<h2>Proyectos destacados</h2>
 			<article class="project">
-				<h3 class="project-title">Platzi Video</h3>
-				<h6 class="project-course">React Native / React</h6>
-				<p class="project-date"><small><strong>Fecha:</strong> 01/07/2018</small></p>
-				<p class="project-url"><small><strong>Puedes verlo en:</strong> www.platzi.com/native</small></p>
-				<p class="project-description">
-						Platzi Video fue el resultado de 3 meses de trabajo para crear la mejor app para enseñar el funcionamiento de React y React Native. Desde crear un vista-detalle,hasta patrones avanzados de navegación, este proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma.
-				</p>
+				<div class="project-details">
+					<h3 class="project-title">Platzi Video</h3>
+					<h6 class="project-course">React Native / React</h6>
+					<p class="project-date"><small><strong>Fecha:</strong> 01/07/2018</small></p>
+					<p class="project-url"><small><strong>Puedes verlo en:</strong> www.platzi.com/native</small></p>
+					<p class="project-description">
+							Platzi Video fue el resultado de 3 meses de trabajo para crear la mejor app para enseñar el funcionamiento de React y React Native. Desde crear un vista-detalle,hasta patrones avanzados de navegación, este proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma.
+					</p>					
+				</div>
 				<figure class="project-imageContainer">
 					<img class="project-image" src="img/platzi-video-react-native.png" alt="Proyecto del curso de react native" width="500">					
 				</figure>
