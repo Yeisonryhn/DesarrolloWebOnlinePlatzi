@@ -1,9 +1,8 @@
 body{
 	font-family: 'Source Sans Pro', sans-serif;
 	margin: 0;
-	/*background: red;*/
+	background-color: #fafafa;
 }
-
 
 h1,h2,h3,h4,h5,h5{
 	font-family: 'Fjalla One', sans-serif;/*Tomada de google fonts, se copia el link en el 
@@ -21,24 +20,35 @@ h1
 	/*text-decoration: underline;Subrayado*/
 	color: white;
 	margin: 0px;
+
+}
+h2{
+	text-transform: uppercase;	
+	color: #026fff;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	margin-bottom: 20px;
 }
 
 h1 strong{
 	color: #026fff;
 }
+
+figure{
+	margin: 0;
+}
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*Seccion del Header*/
 .header{
+
 	background-color: #1d252c;
 	/*box-shadow: 0px 0px 20px #000; */
 	color: white;
 	display: flex;
 	justify-content: space-between;
-	height: 90px;
-}
-
-figure{
-	margin: 0;
+	height: 70px;
+	align-items: center;
 }
 
 .menu{
@@ -66,29 +76,41 @@ figure{
 	height: inherit;	
 	padding: 0 10px;
 }
-
 /*Fin Seccion del Header*/
 /*--------------------------------------------------------------------------------------------------------------------------*/
-
-
-
-
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*Seccion del Hero*/
 .hero{
 	height: 300px;
 	background: #1d252c;
 	background-image: url('../img/hero.jpg');
 	background-size: 500px 300px;
 	background-repeat: no-repeat;
-	background-position-x: right;
-	margin-top: 0px;
-	
+	background-position: right;
+	display: flex;
+	align-items: center;	
 }
 
+.hero h1{
+	padding: 20px;
+}
+/*Fin de Seccion del Hero*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*Seccion del Portfolio*/
 .portfolio{
 	background-color: #fafafa;
+	padding: 20px;	
 }
 
-
+.portfolio h2 {
+	text-transform: uppercase;	
+	color: #026fff;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	margin-bottom: 40px;	
+}
 
 .project{
 	/*border-top: 10px solid red;
@@ -101,19 +123,194 @@ figure{
 	border: 1px solid gray;
 	border-radius: 10px;
 	/*border-top-left-radius: 50px;*/
-	margin: 10px;
 	margin-bottom:15px;
 	padding: 20px;
 	background-color: white;
 	box-shadow: 0px 0px 20px #000;
+	color:#1d252c;
+	display: flex;
+	font-family: 'Fjalla One',sans-serif;
+	justify-content: space-between; 
 }
+
 .project-details{
 	width: 500px;
 }
 
+.project-title{
+	font-size: 30px;
+	margin-top: 0px;
+	margin-bottom: 10px; 
+}
+
+.project-course{
+	color:#6d6d6d;
+}	
+
+.project-course,.project-date,.project-url{
+	margin:  10px 0;
+}
+
+.project-description {
+	font-size: 20px;
+}
+
 .project-imageContainer{
 	width: 500px;
+	vertical-align: middle;
 }
+/*Fin Seccion de Portfolio*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------*/
+/*Seccion de Eventos*/
+.event-list-title {
+	margin: 10px;
+	background-color: #fafafa;
+}
+.event-list {
+	display: flex;
+	background-color: #fafafa;
+}
+
+.event {
+	/*border: 1px solid red;*/
+	margin: 10px;
+	width: 480px;
+	border-radius: 10px;
+	overflow: hidden;	
+	flex-shrink: 0;
+	background-color: #f4fbff; 
+	box-shadow: 0 0 10px #000;
+
+}
+
+.event-image {
+	width: 480px;
+	height: 200px;
+	object-fit: cover;/*Para que la imagen no pierda las proporciones*/
+}
+
+.event-detail {
+	margin: 20px 40px;
+	margin-top: -60px;
+	padding: 20px;
+	position: relative;
+	background-color: #ffffff; 
+	text-align: center;
+
+}
+
+.event-title {
+	margin-top: 0px;
+}
+.event-description {
+	text-align: left;
+}
+.event-url {	
+	margin: auto;
+	padding: 5px 20px; 
+	border: 1px solid #026fff;
+	border-radius: 5px;
+	color: #026fff;
+	text-decoration: none;
+
+}
+/*Fin de Seccion de Eventos*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*Seccion de Contacto*/
+.contact {
+	background-color: #026fff;
+	color: white;
+	display: flex;
+	align-items: center;
+	height: 150px;
+	justify-content: space-between;
+}
+.contact h2{
+	font-size: 20px;
+}
+.form-email input{
+	border-style: solid;	
+	border-width: 1px;
+	border-color: gray;
+	padding: 7px 20px 7px 25px;
+	background-image: url('../img/envelope.svg');
+	background-repeat: no-repeat;
+	background-size:15px 15px; 
+	background-position-y:center;
+	background-position-x: 5px;
+	border-radius: 5px;
+
+}
+.form-email button{
+	/*padding:3px 30px;*/
+	display: block;
+	background: transparent;
+	color: white;
+	padding: 7px 0;
+	border-radius: 5px;
+	width: 100px;
+	margin: 10px 0;
+	
+	
+	border-color: white;
+	border-style: solid;
+	
+	border-width: 1px;	
+	
+}
+
+.social-link {
+	display: inline-block;			
+	width: 50px;
+	height: 50px;
+	background-size: 50px 50px;
+	margin:  0 10px;
+}
+
+.social-link.twitter {
+	background-image: url("../img/twitter.svg");	
+}
+
+.social-link.facebook {
+	background-image: url("../img/facebook.svg");
+}
+
+.social-link.github {
+	background-image: url("../img/github.svg");
+}
+
+.social-link.instagram {
+	background-image: url("../img/instagram.svg");
+}
+
+.contact h2{
+	color: white;
+}
+/*Fin Seccion de Contacto*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*Seccion del Footer*/
+.footer{
+	background-color: #1d252c;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+}
+
+.footer img{
+	width: 80px;
+	vertical-align: middle;/*Cuando se tienen imagenes mezcladas con texto, se puede usar este para que
+	haga el alineado vertical bien*/
+}
+
+.footer a{
+	color: white;
+}
+/*Fin de Seccion del Footer*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------------------------------/*
 /*EXPLICACION DEL DISPLAY FLEXBOX, TIENE UNA PARTE AQUI Y OTRA EN HTML*/
 .flexbox{
