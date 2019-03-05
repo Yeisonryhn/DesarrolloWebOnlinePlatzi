@@ -1,3 +1,4 @@
+/*Seccion General-------------------------------------------------------------------------------------------------------*/
 body{
 	font-family: 'Source Sans Pro', sans-serif;
 	margin: 0;
@@ -16,12 +17,11 @@ h1
 	line-height: 60px;/*Propiedad para cambiar el alto de linea*/
 	letter-spacing: -.2px; /*Esto significa -0.2px del espaciado normal*/
 	/*text-transform: capitalize; pone la primera letra de cada palabra en mayuscula*/
-	text-transform: uppercase;
-	/*text-decoration: underline;Subrayado*/
+	text-transform: uppercase;	
 	color: white;
 	margin: 0px;
-
 }
+
 h2{
 	text-transform: uppercase;	
 	color: #026fff;
@@ -38,10 +38,10 @@ h1 strong{
 figure{
 	margin: 0;
 }
+/*Fin Seccion General*/
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*Seccion del Header*/
 .header{
-
 	background-color: #1d252c;
 	/*box-shadow: 0px 0px 20px #000; */
 	color: white;
@@ -78,15 +78,10 @@ figure{
 }
 /*Fin Seccion del Header*/
 /*--------------------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------------------*/
 /*Seccion del Hero*/
 .hero{
 	height: 300px;
 	background: #1d252c;
-	/*background-image: url('../img/hero.jpg');*/
-	/*background-size: 500px 300px;
-	background-repeat: no-repeat;
-	background-position: right;*/
 	display: flex;
 	align-items: center;	
 	justify-content: space-between;
@@ -95,12 +90,12 @@ figure{
 .hero h1{
 	padding: 20px;
 }
+
 .hero-image{
 	object-fit: cover;
 }
 /*Fin de Seccion del Hero*/
 /*--------------------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
 /*Seccion del Portfolio*/
 .portfolio{
 	background-color: #fafafa;
@@ -116,17 +111,9 @@ figure{
 	margin-bottom: 40px;	
 }
 
-.project{
-	/*border-top: 10px solid red;
-	border-right: 10px solid green;
-	border-left: 10px solid pink;
-	border-bottom: 10px solid orange;*/
-	/*border-color: red;
-	border-width: 15px;
-	border-style: solid;*/
+.project{	
 	border: 1px solid gray;
 	border-radius: 10px;
-	/*border-top-left-radius: 50px;*/
 	margin-bottom:15px;
 	padding: 20px;
 	background-color: white;
@@ -165,12 +152,12 @@ figure{
 }
 /*Fin Seccion de Portfolio*/
 /*--------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------*/
 /*Seccion de Eventos*/
 .event-list-title {
 	margin: 10px;
 	background-color: #fafafa;
 }
+
 .event-list {
 	display: flex;
 	background-color: #fafafa;
@@ -186,7 +173,6 @@ figure{
 	flex-shrink: 0;
 	background-color: #f4fbff; 
 	box-shadow: 0 0 10px #000;
-
 }
 
 .event-image {
@@ -202,15 +188,16 @@ figure{
 	position: relative;
 	background-color: #ffffff; 
 	text-align: center;
-
 }
 
 .event-title {
 	margin-top: 0px;
 }
+
 .event-description {
 	text-align: left;
 }
+
 .event-url {	
 	margin: auto;
 	padding: 5px 20px; 
@@ -218,10 +205,8 @@ figure{
 	border-radius: 5px;
 	color: #026fff;
 	text-decoration: none;
-
 }
 /*Fin de Seccion de Eventos*/
-/*--------------------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*Seccion de Contacto*/
 .contact {
@@ -232,9 +217,11 @@ figure{
 	height: 150px;
 	justify-content: space-between;
 }
+
 .contact h2{
 	font-size: 20px;
 }
+
 .form-email input{
 	border-style: solid;	
 	border-width: 1px;
@@ -246,10 +233,9 @@ figure{
 	background-position-y:center;
 	background-position-x: 5px;
 	border-radius: 5px;
-
 }
+
 .form-email button{
-	/*padding:3px 30px;*/
 	display: block;
 	background: transparent;
 	color: white;
@@ -257,13 +243,9 @@ figure{
 	border-radius: 5px;
 	width: 100px;
 	margin: 10px 0;
-	
-	
 	border-color: white;
-	border-style: solid;
-	
+	border-style: solid;	
 	border-width: 1px;	
-	
 }
 
 .social-link {
@@ -295,7 +277,6 @@ figure{
 }
 /*Fin Seccion de Contacto*/
 /*--------------------------------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------------------------------*/
 /*Seccion del Footer*/
 .footer{
 	background-color: #1d252c;
@@ -316,8 +297,7 @@ figure{
 }
 /*Fin de Seccion del Footer*/
 /*--------------------------------------------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------------------------------*/
-
+/*Contenedor de todo el contenido*/
 .wrapper {
 	/*border: 1px solid red;*/
 	width: 1000px;
@@ -328,30 +308,4 @@ figure{
 	justify-content: inherit;
 	flex-wrap: inherit;
 }
-
-/*EXPLICACION DEL DISPLAY FLEXBOX, TIENE UNA PARTE AQUI Y OTRA EN HTML*/
-.flexbox{
-	display: flex;/*PARA QUE LOS HIJOS DE ESTE FLEXBOX SE PONGAN UNO AL LADO DEL OTRO SIN PERDER LA FORMA*/
-	/*flex-direction: column;*/
-	flex-wrap: wrap;/*PARA QUE EL FLEXBOX ENVUELVA TODAS LAS CAJAS Y NO SE SALGAN DE LA PANTALLA*/
-
-}
-.box{
-	width: 50px;/*ANCHO*/
-	height: 50px;/*ALTO*/
-	border: 1px solid red;/*BORDE*/
-	margin: 5px;/*MARGEN DE 20 PIXELES*/
-	flex-shrink:0;
-}
-/*FIN DE EXPLICACION DEL DISPLAY FLEXBOX*/
-/*---------------------------------------------------------------------------------------------------------------*/
-/*
-	Propiedades de Fuentes
-	line-height para modificar el alto de linea
-	font-size para modificar el tamaño de la fuente
-	font-weight para modificar el tipo de fuente
-	font-style para modificar el estilo de la fuente
-	letter-spacing para modificar el espacio entre letras
-	text-transform para transformar la fuente (mayusculas, minuculas, etc)
-	text-decoration para moodificar la decoración de la 
-*/
+/*--------------------------------------------------------------------------------------------------------------------------*/
