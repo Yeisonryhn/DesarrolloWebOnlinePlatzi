@@ -355,3 +355,23 @@ figure{
 	text-transform para transformar la fuente (mayusculas, minuculas, etc)
 	text-decoration para moodificar la decoración de la 
 */
+
+
+/*ANOTACIONES DE RESPONSIVE DESIGN
+
+	La menor resolucion soportada que vamos a trabajar de ancho va a ser 320pixeles
+
+	Unidades relativas de medida:
+
+Porcentaje: longitud referente al tamaño de los elementos padre
+em: unidad relativa al tamaño de fuente especificada más cercano, incluye al elemento mismo, y luego escala hacia
+
+el padre hasta la fuente especificada mas cercana
+
+rem: unidad relativa al tamaño de fuente especificada en el ancestro más lejano (html o body)
+
+vw / vh: unidad relativa porcentual con respecto al viewport
+
+
+
+*/
