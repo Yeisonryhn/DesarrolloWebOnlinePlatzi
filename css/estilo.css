@@ -329,6 +329,32 @@ figure{
 	flex-wrap: inherit;
 }
 
+/*INICIO DEL RESPONSIVE DESIGN CON MEDIA QUERIES */
+/*RECOMENDACION, SI SE VA A HACER DESKTOP FIRST, LO MEJOR ES EMPEZAR DESDE EL MEDIA QUERY MAS GRANDE*/
+/*LAS SIGUIENTES RESOLUCIONES SE LLAMAN BREAKPOINTS*/
+@media screen and (max-width: 1024px){/*PC DE ESCRITORIO*/
+	body {
+		border: 10px solid blue;
+	}
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px){/*LAPTOP Y TABLET*/
+	body {
+		border: 10px solid green;
+	}
+}
+
+@media screen and (max-width: 480px) and (min-width: 321px){/*TELFONOS GRANDES*/
+	body {
+		border: 10px solid pink;
+	}
+}
+
+@media screen and (max-width: 320px) and (min-width: 0){/*TELEFONOS PEQUEÑOS*/
+	body {
+		border: 10px solid red;
+	}
+}
 /*EXPLICACION DEL DISPLAY FLEXBOX, TIENE UNA PARTE AQUI Y OTRA EN HTML*/
 .flexbox{
 	display: flex;/*PARA QUE LOS HIJOS DE ESTE FLEXBOX SE PONGAN UNO AL LADO DEL OTRO SIN PERDER LA FORMA*/
