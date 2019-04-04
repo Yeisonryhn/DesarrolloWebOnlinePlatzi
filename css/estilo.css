@@ -306,7 +306,8 @@ figure{
 .wrapper {
 	margin: 0 auto;
 	max-width: 1000px;
-	flex: 1;
+	/*width: 100%;*/
+	flex: 1;/*TOMA TODO EL ANCHO DISPONIBLE QUE TENGA DENTRO DEL ELEMENTO*/
 	display: inherit;
 	height: inherit;
 	align-items: inherit;
@@ -323,21 +324,41 @@ figure{
 	}
 }
 
-@media screen and (max-width: 768px){/*LAPTOP Y TABLET*/
+@media screen and (max-width: 767px){/*Por debajo de laptop y tablet LAPTOP Y TABLET*/
 	body {
 		/*border: 10px solid green;*/
+	}
+	.header{
+		display: block;
+		height: auto;
+	}
+
+	.header ol{
+		display: block;/*Initial pone el valor por defecto que traia el ol,Este initial es el display inline*/
+	}
+
+	.header ol li{
+		height: 50px;
+	}
+
+	.header a{
+		justify-content: center;
+	}
+
+	.header .logo{
+		text-align: center;
 	}
 }
 
 @media screen and (max-width: 480px){/*TELFONOS GRANDES*/
 	body {
-		border: 10px solid pink;
+		/*border: 10px solid pink;*/
 	}
 }
 
 @media screen and (max-width: 320px){/*TELEFONOS PEQUEÑOS*/
 	body {
-		border: 10px solid red;
+		/*border: 10px solid red;*/
 	}
 }
 
