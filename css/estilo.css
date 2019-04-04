@@ -122,7 +122,7 @@ figure{
 }
 
 .project-details{
-	width: 500px;
+	width: 50%;
 }
 
 .project-title{
@@ -144,9 +144,16 @@ figure{
 }
 
 .project-imageContainer{
-	width: 500px;
+	width: 50%;
 	vertical-align: middle;
 }
+
+.project-imageContainer img{
+	max-width: 100%;
+	width: 100%;
+	
+}
+
 /*Fin Seccion de Portfolio*/
 /*--------------------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------------------*/
@@ -348,11 +355,45 @@ figure{
 	.header .logo{
 		text-align: center;
 	}
+
+	.project{
+		display: block;
+	}
+	.project-imageContainer{
+		width: auto;
+	}
+	.project-details{
+		width: auto;
+		font-size: 16px;
+	}
+	.project-title{
+		font-size: 1.5em;
+		margin-bottom: .3em;
+	}
+	.project-url{
+
+	}
+	.project-course{
+		font-size: .7em;
+	}
+	.project-date{
+
+	}
+	.project-description{
+		font-size: .8em;
+	}
+	.project-course,.project-date,.project-url{
+		margin:  .3em 0;
+	}
 }
 
 @media screen and (max-width: 480px){/*TELFONOS GRANDES*/
 	body {
 		/*border: 10px solid pink;*/
+	}
+	.project-details{
+		width: auto;
+		font-size: 12px;
 	}
 }
 
