@@ -170,8 +170,8 @@ figure{
 
 .event {
 	/*border: 1px solid red;*/
-	margin: 10px;
-	width: 480px;
+	margin: 1%;
+	width: 48%;
 	border-radius: 10px;
 	overflow: hidden;	
 	flex-shrink: 0;
@@ -385,6 +385,14 @@ figure{
 	.project-course,.project-date,.project-url{
 		margin:  .3em 0;
 	}
+
+	.event{
+		width: auto;
+		flex-shrink: initial;
+	}
+	.event img{
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 480px){/*TELFONOS GRANDES*/
@@ -394,6 +402,12 @@ figure{
 	.project-details{
 		width: auto;
 		font-size: 12px;
+	}
+
+	.event-detail{
+		/*1em en este caso vale 16px, porque no se le ha puesto tamaño de fuente, y por defecto es 16px*/
+		margin:-2em .5em .5em;
+		padding: 1em;
 	}
 }
 
