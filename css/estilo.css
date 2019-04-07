@@ -313,28 +313,26 @@ figure{
 .wrapper {
 	margin: 0 auto;
 	max-width: 1000px;
-	/*width: 100%;*/
 	flex: 1;/*TOMA TODO EL ANCHO DISPONIBLE QUE TENGA DENTRO DEL ELEMENTO*/
 	display: inherit;
 	height: inherit;
 	align-items: inherit;
 	justify-content: inherit;
 	flex-wrap: inherit;
+
 }
 
 /*INICIO DEL RESPONSIVE DESIGN CON MEDIA QUERIES */
 /*RECOMENDACION, SI SE VA A HACER DESKTOP FIRST, LO MEJOR ES EMPEZAR DESDE EL MEDIA QUERY MAS GRANDE*/
 /*LAS SIGUIENTES RESOLUCIONES SE LLAMAN BREAKPOINTS*/
 @media screen and (max-width: 1024px){/*PC DE ESCRITORIO*/
-	body {
-		/*border: 10px solid blue;*/
+	.wrapper{
+		padding: 0 1em;
 	}
+	
 }
 
 @media screen and (max-width: 767px){/*Por debajo de laptop y tablet LAPTOP Y TABLET*/
-	body {
-		/*border: 10px solid green;*/
-	}
 	.header{
 		display: block;
 		height: auto;
@@ -409,6 +407,26 @@ figure{
 		margin:-2em .5em .5em;
 		padding: 1em;
 	}
+
+	.contact{
+		height: auto;
+		padding: 1.5em 0;
+		text-align: center;
+		display: block;
+	}
+	.form-email button{
+		margin: 1em auto;
+
+	}
+	.form-email h2{
+		margin-top: 0;	
+	}
+	.footer{
+		display: block;
+		text-align: center;
+		border: 1px solid transparent;
+	}
+
 }
 
 @media screen and (max-width: 320px){/*TELEFONOS PEQUEÑOS*/
