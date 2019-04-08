@@ -11,7 +11,7 @@ h1,h2,h3,h4,h5,h5{
 
 h1{
 	font-size: 36px;
-	line-height: 60px;
+	line-height: 1.5em;
 	letter-spacing: -.2px; /*Esto significa -0.2px del espaciado normal*/
 	color: white;
 	margin: 0px;
@@ -175,6 +175,7 @@ figure{
 	flex-shrink: 0;
 	background-color: #f4fbff; 
 	box-shadow: 0 0 10px #000;
+	position: relative;
 }
 
 .event-image {
@@ -190,6 +191,8 @@ figure{
 	position: relative;
 	background-color: #ffffff; 
 	text-align: center;
+	position: relative;
+	z-index: 1;
 }
 
 .event-title {
@@ -318,13 +321,38 @@ figure{
 /*INICIO DEL RESPONSIVE DESIGN CON MEDIA QUERIES */
 /*RECOMENDACION, SI SE VA A HACER DESKTOP FIRST, LO MEJOR ES EMPEZAR DESDE EL MEDIA QUERY MAS GRANDE*/
 /*LAS SIGUIENTES RESOLUCIONES SE LLAMAN BREAKPOINTS*/
+
+.html-video{
+	width: 100%;
+	height: auto;
+	/*max-width: 100%;*/
+}
 @media screen and (max-width: 1024px){/*PC DE ESCRITORIO*/
 	.wrapper{
 		padding: 0 1em;
 	}	
+	.hero{
+		height: auto;		
+		position: relative;
+		overflow: hidden;/*Si algo se sobresale del elemento se oculta*/
+		padding: 2em;
+	}
+	.hero-image{
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+	h1{
+		font-size: 2em;
+		z-index: 2;
+		background-color: rgba(0, 0, 0, 0.3);
+	}
 }
 
 @media screen and (max-width: 767px){/*Por debajo de laptop y tablet LAPTOP Y TABLET*/
+
 	.header{
 		display: block;
 		height: auto;
@@ -395,6 +423,9 @@ figure{
 }
 
 @media screen and (max-width: 480px){/*TELFONOS GRANDES*/
+	h1{
+		font-size: 1.5em;
+	}
 	.project-details{
 		width: auto;
 		font-size: 12px;
@@ -429,6 +460,17 @@ figure{
 }
 
 @media screen and (max-width: 320px){/*TELEFONOS PEQUEÑOS*/
+	.wrapper{
+		padding: 0;
+	}
+	.hero h1{
+		font-size: 1.2em;
+		padding: 0.7em;
+
+	}
+	.hero{
+		padding: 2em 1em;
+	}
 }
 
 /*ANOTACIONES DE RESPONSIVE DESIGN
