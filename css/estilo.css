@@ -1,3 +1,33 @@
+@font-face {/**ESTO ES PARA CREAR UNA FUENTE PERSONALIZADA*/
+  font-family: 'icomoon';/*EL NOMBRE QUE LE PONDREMOS A LA FUENTE*/
+  src:  url('../fonts/icomoon.eot?d44amp');/*DISTINTAS FUENTES QUE SE SE VAN A USAR DEPENDIENDO DEL NAVEGADOR*/
+  src:  url('../fonts/icomoon.eot?d44amp#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?d44amp') format('truetype'),
+    url('../fonts/icomoon.woff?d44amp') format('woff'),
+    url('../fonts/icomoon.svg?d44amp#icomoon') format('svg');
+  font-weight: normal;/*AQUI SE PUEDE PONER, NORMAL BOLD LIGHT*/
+  font-style: normal;/*ITALIC*/
+}
+
+[class^="icon-"], [class*=" icon-"] {/*SELECTOR DE ATRIBUTOS SELECTORES UN TANTO AVANZADO, AGARRA CUALQUIER ELEMENTO QUE TIENE UNA CLASE QUE 
+  EMPIECE CON ICON, O CUALQUIER CLASE QUE EN ALGUN MOMENTO DE SU CLASE TENGA TAMBIEN UN ICON*/
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {/*LO QUE ESTÁ DESPUES DE LOS DOS PUNTOS SON LOS PSEUDOELEMENTOS, INVESTIGAR BIEN*/
+  content: "\e900";
+}
 body{
 	font-family: 'Source Sans Pro', sans-serif;
 	margin: 0;
@@ -327,6 +357,27 @@ figure{
 	height: auto;
 	/*max-width: 100%;*/
 }
+/*******************************************************************************************************************/
+/*OJOOOOOOOOOO MUY IMPORTANTE ESTA PARTE, PARA PONER VIDEOS DE IFRAME***********************************************/
+.youtube-video {
+	/*width: 100%;*/
+	/*height: auto;*//*ESTO NO SIRVE EN UN VIDEO DE TIPO IFRAME*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.flexible-video{
+	width: 100%;/*Que tome el 100% del espacio disponible*/
+	height: 0;
+	padding-top: 56.25%;/*Este valor fué calculado de acuerdo a una regla de 3, se debe saber el tamaño del video para
+	esta conversion, si el ancho es el 100% el alto que porcentaje será, eso se traduce a H*100/W                   */
+	/*background-color: blue;*/
+	position: relative;
+}
+/*------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------*/
 @media screen and (max-width: 1024px){/*PC DE ESCRITORIO*/
 	.wrapper{
 		padding: 0 1em;
