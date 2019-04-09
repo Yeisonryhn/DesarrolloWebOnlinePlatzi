@@ -376,6 +376,22 @@ figure{
 	/*background-color: blue;*/
 	position: relative;
 }
+.burger-button{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, .8);
+	display: none;/*Que no se vea por defecto*/
+	line-height: 40px;
+	text-align: center;
+	position: fixed;
+	z-index: 5;
+	left: 5px;
+	top: 5px;
+	color: white;/*Color de la fuente, ya que el burger-button es una fuente personalizada*/
+
+
+}
 /*------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------*/
 @media screen and (max-width: 1024px){/*PC DE ESCRITORIO*/
@@ -404,6 +420,9 @@ figure{
 
 @media screen and (max-width: 767px){/*Por debajo de laptop y tablet LAPTOP Y TABLET*/
 
+	.burger-button{
+		display:block;/*Para que se muestre y tome el ancho y el alto de arriba*/
+	}
 	.header{
 		display: block;
 		height: auto;
