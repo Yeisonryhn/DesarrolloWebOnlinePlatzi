@@ -11,7 +11,7 @@
 			y escalado 1 que significa 100%-->
 	</head>
 	<body>
-		<i class="icon-menu burger-button"></i><!-- tag i se usa para italicas(cursivas)--->
+		<i class="icon-menu burger-button" id="burger-menu"></i><!-- tag i se usa para italicas(cursivas)--->
 		<header class="header"><!--Estilos en linea -->		
 			<div class=wrapper>
 					
@@ -19,7 +19,7 @@
 					<img src="img/logo.png" alt="Logo de yeisonfuentes.com" height="50">
 				</figure>
 
-				<nav class="menu  is-active">
+				<nav class="menu">
 					<ol>
 						<li><a class="link" href="#portafolio" title="">Portafolio</a></li>
 						<li><a class="link" href="#experiencia" title="">Experiencia</a></li>
@@ -173,6 +173,33 @@
 			</div>
 			
 		</footer>
-	
+		<script>
+			const menu = document.querySelector('.menu');
+			const ipad = window.matchMedia('screen and (max-width: 767px)');
+			const burgerButton = document.querySelector('#burger-menu');
+			console.log(ipad);
+			/*burgerButton.addEventListener( 'click' , hideShow );*/
+			ipad.addListener(validation)/*Escucha cuando se empieza a implementar un media query, y ejecuta una funcion*/
+
+			function validation(event){
+				console.log('hola');
+				if(event.matches){/*si matches del media query es true, puedes verificarlo desde console.log de la variable ipad que contiene el mediaquery*/
+					console.log('true');
+					burgerButton.addEventListener( 'click' , hideShow );/*agrega escuchador de evento click*/
+				} else {
+					console.log('false');
+					burgerButton.removeEventListener( 'click' , hideShow );/*quita escuchador de evento click*/
+				}
+			}
+			validation(ipad);
+			function hideShow(){
+				/*console.log('click');*/
+				if (menu.classList.contains('is-active')){
+					menu.classList.remove('is-active');
+				}else{
+					menu.classList.add('is-active');
+				}				
+			}
+		</script>
 	</body>
 </html>
