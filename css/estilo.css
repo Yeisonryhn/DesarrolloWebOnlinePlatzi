@@ -1,3 +1,34 @@
+@font-face {/**ESTO ES PARA CREAR UNA FUENTE PERSONALIZADA*/
+  font-family: 'icomoon';/*EL NOMBRE QUE LE PONDREMOS A LA FUENTE*/
+  src:  url('../fonts/icomoon.eot?d44amp');/*DISTINTAS FUENTES QUE SE SE VAN A USAR DEPENDIENDO DEL NAVEGADOR*/
+  src:  url('../fonts/icomoon.eot?d44amp#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?d44amp') format('truetype'),
+    url('../fonts/icomoon.woff?d44amp') format('woff'),
+    url('../fonts/icomoon.svg?d44amp#icomoon') format('svg');
+  font-weight: normal;/*AQUI SE PUEDE PONER, NORMAL BOLD LIGHT*/
+  font-style: normal;/*ITALIC*/
+}
+
+[class^="icon-"], [class*=" icon-"] {/*SELECTOR DE ATRIBUTOS SELECTORES UN TANTO AVANZADO, AGARRA CUALQUIER ELEMENTO QUE TIENE UNA CLASE QUE 
+  EMPIECE CON ICON, O CUALQUIER CLASE QUE EN ALGUN MOMENTO DE SU CLASE TENGA TAMBIEN UN ICON*/
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {/*LO QUE ESTÁ DESPUES DE LOS DOS PUNTOS SON LOS PSEUDOELEMENTOS, INVESTIGAR BIEN*/
+  content: "\e900";
+}
+
 /*Seccion General-------------------------------------------------------------------------------------------------------*/
 body{
 	font-family: 'Source Sans Pro', sans-serif;
@@ -6,18 +37,16 @@ body{
 }
 
 h1,h2,h3,h4,h5,h5{
-	font-family: 'Fjalla One', sans-serif;/*Tomada de google fonts, se copia el link en el 
-	html, despues del link de nuestra hoja de estilos, y luego se usa desde aqui (el css).*/	
+	font-family: 'Fjalla One', sans-serif;
 	font-weight: normal;
 }
 
-h1
-{
-	font-size: 40px;
-	line-height: 60px;/*Propiedad para cambiar el alto de linea*/
+h1{
+	font-size: 36px;
+	line-height: 1.5em;
 	letter-spacing: -.2px; /*Esto significa -0.2px del espaciado normal*/
-	/*text-transform: capitalize; pone la primera letra de cada palabra en mayuscula*/
-	text-transform: uppercase;	
+	text-transform: capitalize;/* pone la primera letra de cada palabra en mayuscula*/
+	/*text-transform: uppercase;*/
 	color: white;
 	margin: 0px;
 }
@@ -42,12 +71,12 @@ figure{
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*Seccion del Header*/
 .header{
-	background-color: #1d252c;
-	/*box-shadow: 0px 0px 20px #000; */
-	color: white;
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	background-color: #1d252c;
+	color: white;
 	height: 70px;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -67,12 +96,11 @@ figure{
 	height: inherit;
 }	
 
-.header ol li a{
+.header a{
 	text-decoration: none;
 	color: white;
-	display: flex;/*Es necesario para poder alinear verticalmente a su hijo que es la "a"*/
-	align-items: center;/*Se colocó en la a porque la estamos tratando como elemento padre, su hijo es el texto que lleva 
-	dentro por lo tanto, se centra el texto*/
+	display: flex;
+	align-items: center;
 	height: inherit;	
 	padding: 0 10px;
 }
@@ -80,9 +108,10 @@ figure{
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*Seccion del Hero*/
 .hero{
-	height: 300px;
-	background: #1d252c;
 	display: flex;
+	flex-wrap: wrap;
+	height: 300px;
+	background: #1d252c;	
 	align-items: center;	
 	justify-content: space-between;
 }
@@ -111,7 +140,9 @@ figure{
 	margin-bottom: 40px;	
 }
 
-.project{	
+.project{
+	display: flex;
+	flex-wrap: wrap;
 	border: 1px solid gray;
 	border-radius: 10px;
 	margin-bottom:15px;
@@ -119,13 +150,12 @@ figure{
 	background-color: white;
 	box-shadow: 0px 0px 20px #000;
 	color:#1d252c;
-	display: flex;
 	font-family: 'Fjalla One',sans-serif;
 	justify-content: space-between; 
 }
 
 .project-details{
-	width: 500px;
+	width: 50%;
 }
 
 .project-title{
@@ -147,9 +177,15 @@ figure{
 }
 
 .project-imageContainer{
-	width: 500px;
+	width: 50%;
 	vertical-align: middle;
 }
+
+.project-imageContainer img{
+	max-width: 100%;
+	width: 100%;	
+}
+
 /*Fin Seccion de Portfolio*/
 /*--------------------------------------------------------------------------------------------------------------*/
 /*Seccion de Eventos*/
@@ -166,13 +202,14 @@ figure{
 
 .event {
 	/*border: 1px solid red;*/
-	margin: 10px;
-	width: 480px;
+	margin: 1%;
+	width: 48%;
 	border-radius: 10px;
 	overflow: hidden;	
 	flex-shrink: 0;
 	background-color: #f4fbff; 
 	box-shadow: 0 0 10px #000;
+	position: relative;
 }
 
 .event-image {
@@ -188,8 +225,9 @@ figure{
 	position: relative;
 	background-color: #ffffff; 
 	text-align: center;
+	position: relative;
+	z-index: 1;
 }
-
 .event-title {
 	margin-top: 0px;
 }
@@ -210,9 +248,10 @@ figure{
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*Seccion de Contacto*/
 .contact {
+	display: flex;
+	flex-wrap: wrap;
 	background-color: #026fff;
 	color: white;
-	display: flex;
 	align-items: center;
 	height: 150px;
 	justify-content: space-between;
@@ -244,7 +283,7 @@ figure{
 	width: 100px;
 	margin: 10px 0;
 	border-color: white;
-	border-style: solid;	
+	border-style: solid;
 	border-width: 1px;	
 }
 
@@ -279,8 +318,9 @@ figure{
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*Seccion del Footer*/
 .footer{
-	background-color: #1d252c;
 	display: flex;
+	flex-wrap: wrap;
+	background-color: #1d252c;
 	justify-content: space-between;
 	align-items: center;
 	color: white;
@@ -288,8 +328,7 @@ figure{
 
 .footer img{
 	width: 80px;
-	vertical-align: middle;/*Cuando se tienen imagenes mezcladas con texto, se puede usar este para que
-	haga el alineado vertical bien*/
+	vertical-align: middle;
 }
 
 .footer a{
@@ -299,9 +338,9 @@ figure{
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*Contenedor de todo el contenido*/
 .wrapper {
-	/*border: 1px solid red;*/
-	width: 1000px;
 	margin: 0 auto;
+	max-width: 1000px;
+	flex: 1;/*TOMA TODO EL ANCHO DISPONIBLE QUE TENGA DENTRO DEL ELEMENTO*/
 	display: inherit;
 	height: inherit;
 	align-items: inherit;
@@ -309,3 +348,252 @@ figure{
 	flex-wrap: inherit;
 }
 /*--------------------------------------------------------------------------------------------------------------------------*/
+
+/*INICIO DEL RESPONSIVE DESIGN CON MEDIA QUERIES */
+/*RECOMENDACION, SI SE VA A HACER DESKTOP FIRST, LO MEJOR ES EMPEZAR DESDE EL MEDIA QUERY MAS GRANDE*/
+/*LAS SIGUIENTES RESOLUCIONES SE LLAMAN BREAKPOINTS*/
+
+.html-video{
+	width: 100%;
+	height: auto;
+	/*max-width: 100%;*/
+}
+/*******************************************************************************************************************/
+/*OJOOOOOOOOOO MUY IMPORTANTE ESTA PARTE, PARA PONER VIDEOS DE IFRAME***********************************************/
+.youtube-video {
+	/*width: 100%;*/
+	/*height: auto;*//*ESTO NO SIRVE EN UN VIDEO DE TIPO IFRAME*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.flexible-video{
+	width: 100%;/*Que tome el 100% del espacio disponible*/
+	height: 0;
+	padding-top: 56.25%;/*Este valor fué calculado de acuerdo a una regla de 3, se debe saber el tamaño del video para
+	esta conversion, si el ancho es el 100% el alto que porcentaje será, eso se traduce a H*100/W                   */
+	/*background-color: blue;*/
+	position: relative;
+}
+.burger-button{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, .8);
+	display: none;/*Que no se vea por defecto*/
+	line-height: 40px;
+	text-align: center;
+	position: fixed;
+	z-index: 5;
+	left: 5px;
+	top: 5px;
+	color: white;/*Color de la fuente, ya que el burger-button es una fuente personalizada*/
+
+
+}
+/*------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 1023px){/*PC DE ESCRITORIO*/
+	.portfolio{
+		padding: 0;
+	}
+	.wrapper{
+		padding: 0 1em;
+	}	
+	.hero{
+		height: auto;		
+		position: relative;
+		overflow: hidden;/*Si algo se sobresale del elemento se oculta*/
+		padding: 2em;
+	}
+	.hero-image{
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+	}
+	.event-list-title {
+    margin: 0px;
+    }
+	h1{
+		font-size: 2em;
+		z-index: 2;
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+}
+
+@media screen and (max-width: 767px){/*Por debajo de laptop y tablet LAPTOP Y TABLET*/
+	.portfolio h2{
+		font-size: 1.2em;
+		margin: .5em 0;
+	}
+	.burger-button{
+		display:block;/*Para que se muestre y tome el ancho y el alto de arriba*/
+	}
+	.header{
+		display: block;
+		height: auto;
+	}
+
+	.header ol{
+		display: block;/*Initial pone el valor por defecto que traia el ol,Este initial es el display inline*/
+	}
+
+	.header ol li{
+		height: 50px;
+	}
+
+	.header a{
+		justify-content: center;
+		height: 40px;
+		font-size: 2em;
+		text-decoration: underline;
+		margin-bottom: .5em;
+	}
+
+	.header .logo{
+		text-align: center;
+	}
+
+	.menu{
+		position: fixed;
+		background-color: rgba(2, 111, 255, .8);
+		z-index: 3;
+		top: 0;
+		left: -100vw;
+		width: 100vw;/*100% del ancho que tenga el viewport*/
+		/*height: 100vh;/*100% del alto que tenga el viewport**/
+		bottom: 0;/*Esto junto con la propiedad top, hacen que el elemento se estire*/
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: .3s;
+
+	}
+	.menu.is-active{
+		left: 0;
+	}
+	.project{
+		display: block;
+	}
+
+	.project-imageContainer{
+		width: auto;
+	}
+
+	.project-details{
+		width: auto;
+		font-size: 16px;
+	}
+
+	.project-title{
+		font-size: 1.5em;
+		margin-bottom: .3em;
+	}
+
+	.project-url{
+
+	}
+
+	.project-course{
+		font-size: .7em;
+	}
+
+	.project-date{
+
+	}
+
+	.project-description{
+		font-size: 1em;
+	}
+
+	.project-course,.project-date,.project-url{
+		margin:  .3em 0;
+	}
+
+	.event{
+		width: auto;
+		
+		flex-shrink: initial;
+	}
+	.event img{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px){/*TELFONOS GRANDES*/
+	h1{
+		font-size: 1.5em;
+	}
+	.project-details{
+		width: auto;
+		font-size: 14px;
+	}
+
+	.event-detail{
+		/*1em en este caso vale 16px, porque no se le ha puesto tamaño de fuente, y por defecto es 16px*/
+		margin:-2em .5em .5em;
+		padding: 1em;
+	}
+
+	.contact{
+		height: auto;
+		padding: 1.5em 1em;
+		text-align: center;
+		display: block;
+	}
+
+	.form-email button{
+		margin: 1em auto;
+	}
+
+	.form-email h2{
+		margin-top: 0;	
+	}
+
+	.footer{
+		display: block;
+		text-align: center;
+		border: 1px solid transparent;
+	}
+}
+
+@media screen and (max-width: 320px){/*TELEFONOS PEQUEÑOS*/
+	.wrapper{
+		/*padding: 0;*/
+	}
+	.hero h1{
+		font-size: 1.2em;
+		padding: 0.7em;
+
+	}
+	.hero{
+		padding: 2em 1em;
+	}
+
+	.social-link{
+		width: 40px;
+		height: 40px;
+		background-size: 100%;
+	}
+}
+
+/*ANOTACIONES DE RESPONSIVE DESIGN
+
+	La menor resolucion soportada que vamos a trabajar de ancho va a ser 320pixeles
+
+	Unidades relativas de medida:
+
+Porcentaje: longitud referente al tamaño de los elementos padre
+em: unidad relativa al tamaño de fuente especificada más cercano, incluye al elemento mismo, y luego escala hacia
+
+el padre hasta la fuente especificada mas cercana
+
+rem: unidad relativa al tamaño de fuente especificada en el ancestro más lejano (html o body)
+
+vw / vh: unidad relativa porcentual con respecto al viewport
+*/
+
